@@ -1,3 +1,3 @@
 const colors = require("colors");
 
-console.log("hello".green);
+console.log("Paul J. Thurmond".america);
