@@ -1,3 +1,4 @@
 const math = require("./math");
 
-console.log(math.add(2, 2));
+const cats = require("./shelter");
+console.log(cats);
