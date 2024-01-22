@@ -1,1 +1,5 @@
 node_modules
+modules/jokester/node_modules/.bin/uuid
+modules/jokester/node_modules/.bin/sshpk-verify
+modules/jokester/node_modules/.bin/sshpk-sign
+modules/jokester/node_modules/.bin/sshpk-conv
