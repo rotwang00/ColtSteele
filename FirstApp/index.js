@@ -12,16 +12,34 @@ app.get("/", (req, res) => {
   res.send("This is the home page.");
 });
 
+app.get("/r/:subreddit", (req, res) => {
+  const { subreddit } = req.params;
+  res.send(`Welcome to the ${subreddit} subreddit!`);
+});
+
+app.get("/r/:subreddit/:postID", (req, res) => {
+  const { subreddit, postID } = req.params;
+  res.send(`<h1>Viewing post ${postID} in the ${subreddit} subreddit.</h1>`);
+});
+
 app.post("/cats", (req, res) => {
   res.send("POST REQUEST TO /cats");
 });
 
-app.get("/cats", (req, res) => {
-  res.send("MEOW!!!");
+app.get("/kitties", (req, res) => {
+  res.send("MEOW!!! Yes!");
 });
 
 app.get("/dogs", (req, res) => {
   res.send("WOOF!");
+});
+
+app.get("/search", (req, res) => {
+  const { q } = req.query;
+  if (!q) {
+    res.send("Nothing found if nothing searched?");
+  }
+  res.send(`You searched for "${q}"`);
 });
 
 app.get("*", (req, res) => {
